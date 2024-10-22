@@ -160,28 +160,45 @@ function zeros() {
 
 }
 
-function shortest_dist() {
+/**function shortest_dist() {
     let m =  Number(document.getElementById("m").value)
     let b = Number(document.getElementById("b").value)
     let x = Number(document.getElementById("x").value)
     let y = Number(document.getElementById("x").value)
     let equation = -1*m*x + y - b
     let equation2 = -1*m*x + yy - b/(Math.sqrt(-1*m**2 + y**2)) 
-}
+}**/
 
 
 
 //perpendicular bisector
-function perp_bisector() {
-    let x1 =  Number(document.getElementById("m").value)
-    let y1 = Number(document.getElementById("b").value)
-    let x2 = Number(document.getElementById("x").value)
-    let y2 = Number(document.getElementById("x").value)
-    let m2 = ((x2 - x1)/(y2-y1))*-1
-    let mid1 = average(x1, x2)
-    let mid2 = average(y1, y2)
-    let b = mid2 - m2*mid1
-    let equation = ` y = ${m2}x + ${b}`
+function shortest_dist() {
+    let m =  Number(document.getElementById("m1").value)
+    let b = Number(document.getElementById("b1").value)
+    let x = Number(document.getElementById("x11").value)
+    let y = Number(document.getElementById("y11").value)
+    let m2 = -1/(m)
+    let b1 = y - m2*x
+    let equation = m2*x + b1
+    let x2 = (b + (b1*-1))/((m*-1) + m2)
+
+
     document.getElementById("answer4").textContent = equation
     console.log(equation)
 }
+
+
+//perpendicular bisector
+/**function perp_bisector() {
+    let m =  Number(document.getElementById("m1").value)
+    let b = Number(document.getElementById("b1").value)
+    let x = Number(document.getElementById("x11").value)
+    let y = Number(document.getElementById("y11").value)
+    let m2 = ((x2 - x1)/(y2-y1))*-1
+    let mid1 = average(x1, x2)
+    let mid2 = average(y1, y2)
+    let b1 = mid2 - m2*mid1
+    let equation = ` y = ${m2}x + ${b}`
+    document.getElementById("answer4").textContent = equation
+    console.log(equation)
+}**/
