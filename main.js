@@ -30,20 +30,20 @@ function delta(a, b) {
     return (delta(y2, y1)/delta(x2, x1))
 } **/
 
-    function slope2(x1, y1,x2,y2) {
+    /**function slope2(x1, y1,x2,y2) {
         let slope = delta(y2, y1)/delta(x2, x1)
-        document.getElementById("answer2").textContent = slope
         return slope
-    }
+    }**/
 
 function slope() {
     let x1 =  Number(document.getElementById("x1").value)
     let y1 = Number(document.getElementById("y1").value)
     let x2 = Number(document.getElementById("x2").value)
     let y2 = Number(document.getElementById("y2").value)
-    let slope = delta(y2, y1)/delta(x2, x1)
+    let slope = (delta(y2, y1))/(delta(x2, x1))
+ 
     document.getElementById("answer2").textContent = slope
-    console.log(slope)    
+    console.log(slope) 
 }
 
 
@@ -62,15 +62,15 @@ function midpoint() {
 }
 
 // Round to the nearest `decimals` number of decimals
-function round(value, d) {
-    return Math.round(value * 10**d) / 10**d;
+function round(value, decimal) {
+    return Math.round(value * 10**decimal) / 10**decimal;
 }
 
 // Round to the user's number of decimals
 function round_user(value) {
     // Get the number of decimals from the "rounding" box
-  let d = Number(document.getElementById("rounding").value)
-    round(value, d)
+  let d = Number(document.getElementById("rounding").value) 
+  return round(value, d)
 }
 
 /**function length(x1, x2, y1, y2) {
@@ -83,8 +83,8 @@ function length_i() {
     let x2 = Number(document.getElementById("x2").value)
     let y2 = Number(document.getElementById("y2").value)
     let length = Math.sqrt(delta(x2, x1)**2 + delta(y2,y1)**2)
-    document.getElementById("answer2").textContent = length
-    console.log (length)
+    document.getElementById("answer2").textContent = round_user(length)
+    console.log (round_user(length))
 }
 
 // 7
@@ -152,12 +152,24 @@ function zeros() {
         console.log(`It has no zeros`)
     }
     else {
-        /**let xi = `(${-b + Math.sqrt(b**2 -(4*a*c))/(2*a)}, 0)`
-        let xii = `(${-b - Math.sqrt(b**2 - (4*a*c))/(2*a)}, 0)` **/
-        let zeros = `(${-1*b + Math.sqrt((b**2) -(4*a*c))/(2*a)}, 0) ${-1*b - Math.sqrt((b**2) - (4*a*c))/(2*a)}, 0)`
+        /**let x1 = `(${(-b + Math.sqrt(b**2 -(4*a*c)))/(2*a)}, 0)`
+        let x2 = `(${(-b - Math.sqrt(b**2 - (4*a*c)))/(2*a)}, 0)` **/
+        let zeros = `(${(-1*b + Math.sqrt((b**2) -(4*a*c)))/(2*a)}, 0) (${(-1*b - Math.sqrt((b**2) - (4*a*c)))/(2*a)}, 0)`
         document.getElementById("quadratic_output").textContent = zeros
         console.log(zeros)
     }
 
 }
+
+function shortest_dist() {
+    let m =  Number(document.getElementById("m").value)
+    let b = Number(document.getElementById("b").value)
+    let x = Number(document.getElementById("x").value)
+    let y = Number(document.getElementById("x").value)
+    let equation = -1*m*x + y - b
+    let equation2 = -1*m*x + yy - b/(Math.sqrt(-1*m**2 + y**2)) 
+}
+
+
+
 
