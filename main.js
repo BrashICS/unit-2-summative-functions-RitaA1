@@ -59,7 +59,7 @@ function slope() {
 
 
 function average(n1, n2) {
-    return (n1 + n2/2)   
+    return ((n1 + n2)/2)   
  }
 
 function midpoint() {
@@ -67,9 +67,9 @@ function midpoint() {
     let y1 = Number(document.getElementById("y1").value)
     let x2 = Number(document.getElementById("x2").value)
     let y2 = Number(document.getElementById("y2").value)
-    let midpoint = `(${average(x1, x2)}, ${average(y1, y2)})`
-    document.getElementById("answer2").textContent = round_user(midpoint)
-    console.log(round_user(midpoint))  
+    let midpoint = `(${round_user(average(x1, x2))}, ${round_user(average(y1, y2))})`
+    document.getElementById("answer2").textContent = midpoint
+    console.log(midpoint)  
 }
 
 /**function length(x1, x2, y1, y2) {
