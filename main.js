@@ -30,6 +30,12 @@ function delta(a, b) {
     return (delta(y2, y1)/delta(x2, x1))
 } **/
 
+    function slope2(x1, y1,x2,y2) {
+        let slope = delta(y2, y1)/delta(x2, x1)
+        document.getElementById("answer2").textContent = slope
+        return slope
+    }
+
 function slope() {
     let x1 =  Number(document.getElementById("x1").value)
     let y1 = Number(document.getElementById("y1").value)
@@ -140,10 +146,11 @@ function zeros() {
     let a =  Number(document.getElementById("a").value)
     let b = Number(document.getElementById("b").value)
     let c = Number(document.getElementById("c").value)
-    let x1 = -b + Math.sqrt(b**2 -(4*a*c))/(2*a)
-    let x2 = -b - Math.sqrt(b**2 - (4*a*c))/(2*a)
-    document.getElementById("quadratic_output").textContent = `(${x1}, 0) (${x2}, 0)`
-    console.log(`(${x1}, 0) (${x2}, 0)`)
+    /**let xi = `(${-b + Math.sqrt(b**2 -(4*a*c))/(2*a)}, 0)`
+    let xii = `(${-b - Math.sqrt(b**2 - (4*a*c))/(2*a)}, 0)` **/
+    let zeros = `(${-1*b + Math.sqrt((b**2) -(4*a*c))/(2*a)}, 0) ${-1*b - Math.sqrt((b**2) - (4*a*c))/(2*a)}, 0)`
+    document.getElementById("quadratic_output").textContent = zeros
+    console.log(zeros)
 
 }
 
