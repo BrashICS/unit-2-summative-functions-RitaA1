@@ -146,11 +146,18 @@ function zeros() {
     let a =  Number(document.getElementById("a").value)
     let b = Number(document.getElementById("b").value)
     let c = Number(document.getElementById("c").value)
-    /**let xi = `(${-b + Math.sqrt(b**2 -(4*a*c))/(2*a)}, 0)`
-    let xii = `(${-b - Math.sqrt(b**2 - (4*a*c))/(2*a)}, 0)` **/
-    let zeros = `(${-1*b + Math.sqrt((b**2) -(4*a*c))/(2*a)}, 0) ${-1*b - Math.sqrt((b**2) - (4*a*c))/(2*a)}, 0)`
-    document.getElementById("quadratic_output").textContent = zeros
-    console.log(zeros)
+    let discriminant = b**2 - 4*a*c
+    if (discriminant < 0 ) {
+        document.getElementById("quadratic_output").textContent = ` It has no zeros`
+        console.log(`It has no zeros`)
+    }
+    else {
+        /**let xi = `(${-b + Math.sqrt(b**2 -(4*a*c))/(2*a)}, 0)`
+        let xii = `(${-b - Math.sqrt(b**2 - (4*a*c))/(2*a)}, 0)` **/
+        let zeros = `(${-1*b + Math.sqrt((b**2) -(4*a*c))/(2*a)}, 0) ${-1*b - Math.sqrt((b**2) - (4*a*c))/(2*a)}, 0)`
+        document.getElementById("quadratic_output").textContent = zeros
+        console.log(zeros)
+    }
 
 }
 
