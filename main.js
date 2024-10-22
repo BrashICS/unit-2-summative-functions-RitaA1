@@ -18,6 +18,9 @@ document.getElementById("sphere_volume").addEventListener("click", sphere_volume
 document.getElementById("sphere_area").addEventListener("click", sphere_area)
 document.getElementById("zeros").addEventListener("click", zeros);
 document.getElementById("vertex").addEventListener("click", vertex);
+document.getElementById("short_dist").addEventListener("click", shortest_dist);
+document.getElementById("perp_bisector").addEventListener("click", perp_bisector);
+
 
 
 /*** Functions ***/
@@ -72,8 +75,8 @@ function midpoint() {
     console.log(midpoint)  
 }
 
-/**function length(x1, x2, y1, y2) {
-    return (delta(x2, x1))**2 + delta(y2,y1)**2
+/**function length1(x1, x2, y1, y2) {
+    return ((delta(x2, x1))**2 + (delta(y2,y1))**2)
 }**/
 
 function length() {
@@ -151,8 +154,6 @@ function zeros() {
         console.log(`It has no zeros`)
     }
     else {
-        /**let x1 = `(${(-b + Math.sqrt(b**2 -(4*a*c)))/(2*a)}, 0)`
-        let x2 = `(${(-b - Math.sqrt(b**2 - (4*a*c)))/(2*a)}, 0)` **/
         let zeros = `(${round_user((-1*b + Math.sqrt((b**2) -(4*a*c)))/(2*a))}, 0) (${round_user((-1*b - Math.sqrt((b**2) - (4*a*c)))/(2*a))}, 0)`
         document.getElementById("quadratic_output").textContent = zeros
         console.log(zeros)
@@ -160,45 +161,37 @@ function zeros() {
 
 }
 
-/**function shortest_dist() {
-    let m =  Number(document.getElementById("m").value)
-    let b = Number(document.getElementById("b").value)
-    let x = Number(document.getElementById("x").value)
-    let y = Number(document.getElementById("x").value)
-    let equation = -1*m*x + y - b
-    let equation2 = -1*m*x + yy - b/(Math.sqrt(-1*m**2 + y**2)) 
-}**/
-
-
-
-//perpendicular bisector
+//shortest dist
 function shortest_dist() {
     let m =  Number(document.getElementById("m1").value)
     let b = Number(document.getElementById("b1").value)
     let x = Number(document.getElementById("x11").value)
     let y = Number(document.getElementById("y11").value)
+    //find equation of the perpendicular 2nd line
     let m2 = -1/(m)
     let b1 = y - m2*x
-    let equation = m2*x + b1
+    //equation of 2nd line = m2*x + b1
+    // equation of 1st line = mx + b
+    //calculate POI of the 2 lines 
     let x2 = (b + (b1*-1))/((m*-1) + m2)
-
-
-    document.getElementById("answer4").textContent = equation
-    console.log(equation)
+    let y2 = m2*x2 + b1
+    // calculate lenght between the POI and the point of 2nd line
+    let length = Math.sqrt((x2 - x)**2 + (y2 - y)**2)
+    document.getElementById("answer4").textContent = round_user(length)
+    console.log(round_user(length))
 }
 
-
 //perpendicular bisector
-/**function perp_bisector() {
-    let m =  Number(document.getElementById("m1").value)
-    let b = Number(document.getElementById("b1").value)
-    let x = Number(document.getElementById("x11").value)
-    let y = Number(document.getElementById("y11").value)
+function perp_bisector() {
+    let x1 =  Number(document.getElementById("x3").value)
+    let y1 = Number(document.getElementById("y3").value)
+    let x2 = Number(document.getElementById("x4").value)
+    let y2 = Number(document.getElementById("y4").value)
     let m2 = ((x2 - x1)/(y2-y1))*-1
-    let mid1 = average(x1, x2)
-    let mid2 = average(y1, y2)
-    let b1 = mid2 - m2*mid1
-    let equation = ` y = ${m2}x + ${b}`
-    document.getElementById("answer4").textContent = equation
+    let midpt_x = average(x1, x2)
+    let midpt_y = average(y1, y2)
+    let b1 = midpt_y - m2*midpt_x
+    let equation = `y = ${m2}x + ${b1}`
+    document.getElementById("answer5").textContent = equation
     console.log(equation)
-}**/
+}

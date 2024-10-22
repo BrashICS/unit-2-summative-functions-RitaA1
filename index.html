@@ -112,33 +112,54 @@
         <hr>
         <!-- geometry -->
         <div>
-            <h4>Part 3 - more</h4>
-            <p>
-                Enter the values of "a", "b", and "c" of a quadratic in standard form:
-            </p>
+            <h4>Part 3 Length and Perpendicular Bisector of A Line Segment</h4>
+            <!--p>
+                Enter the values of "m", "b", "x" and "y" of a quadratic in standard form:
+            </p-->
             
             <label for="m">m:</label>
-            <input id="m1" name="m" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+            <input id="m1" name="m1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
             <label for="b">b:</label>
             <input id="b1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
-            <label for="x1">x:</label>
+            <label for="x11">x:</label>
             <input id="x11" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
 
             <label for="y11">y:</label>
             <input id="y11" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
-
-            <button id="perp_bisector"> Perpendicular Bisector</button> 
+            <br>
+            <br>
             <button id="short_dist">Find shortest distance between point and line</button>
 
             <!-- Output for the zeros or vertex -->
            <div> 
                 <br>
                 The Answer is: 
-                <span id="quadratic_output"></span>
+                <span id="answer4"></span>
            </div>
         </div>
+        
+        <!--continue-->
+        <div>
+            <h4>perpendicular bisector</h4>
 
+            <label for="x1">x1:</label>
+            <input id="x3" name="x1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+            <label for="y3">y1:</label>
+            <input id="y3" name="y1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+            <label for="x4">x2:</label>
+            <input id="x4" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">    
+            <label for="y4">y2:</label>
+            <input id="y4" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">  
+            <br>
+            <br>
+            <button id="perp_bisector"> The Equation of The Perpendicular Bisector</button> 
 
+            <div>
+                <br>
+                The Answer is:
+                <span id="answer5"></span>
+            </div>
+        </div>
 
     </body>
 </html>
