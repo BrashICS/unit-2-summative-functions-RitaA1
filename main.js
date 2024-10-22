@@ -140,8 +140,8 @@ function zeros() {
     let a =  Number(document.getElementById("a").value)
     let b = Number(document.getElementById("b").value)
     let c = Number(document.getElementById("c").value)
-    let x1 = -b + Math.sqrt(b**2 - 4*a*c)/(2*a)
-    let x2 = -b - Math.sqrt(b**2 - 4*a*c)/(2*a)
+    let x1 = -b + Math.sqrt(b**2 -(4*a*c))/(2*a)
+    let x2 = -b - Math.sqrt(b**2 - (4*a*c))/(2*a)
     document.getElementById("quadratic_output").textContent = `(${x1}, 0) (${x2}, 0)`
     console.log(`(${x1}, 0) (${x2}, 0)`)
 
