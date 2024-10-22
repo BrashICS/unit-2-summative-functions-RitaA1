@@ -22,6 +22,17 @@ document.getElementById("vertex").addEventListener("click", vertex);
 
 /*** Functions ***/
 
+// Round to the nearest `decimals` number of decimals
+function round(value, decimal) {
+    return Math.round(value * 10**decimal) / 10**decimal;
+}
+
+// Round to the user's number of decimals
+function round_user(value) {
+    // Get the number of decimals from the "rounding" box
+  let d = Number(document.getElementById("rounding").value) 
+  return round(value, d)
+}
 function delta(a, b) {
     return(a - b)
 }
@@ -42,8 +53,8 @@ function slope() {
     let y2 = Number(document.getElementById("y2").value)
     let slope = (delta(y2, y1))/(delta(x2, x1))
  
-    document.getElementById("answer2").textContent = slope
-    console.log(slope) 
+    document.getElementById("answer2").textContent = round_user(slope)
+    console.log(round_user(slope)) 
 }
 
 
@@ -57,20 +68,8 @@ function midpoint() {
     let x2 = Number(document.getElementById("x2").value)
     let y2 = Number(document.getElementById("y2").value)
     let midpoint = `(${average(x1, x2)}, ${average(y1, y2)})`
-    document.getElementById("answer2").textContent = midpoint
-    console.log(midpoint)  
-}
-
-// Round to the nearest `decimals` number of decimals
-function round(value, decimal) {
-    return Math.round(value * 10**decimal) / 10**decimal;
-}
-
-// Round to the user's number of decimals
-function round_user(value) {
-    // Get the number of decimals from the "rounding" box
-  let d = Number(document.getElementById("rounding").value) 
-  return round(value, d)
+    document.getElementById("answer2").textContent = round_user(midpoint)
+    console.log(round_user(midpoint))  
 }
 
 /**function length(x1, x2, y1, y2) {
