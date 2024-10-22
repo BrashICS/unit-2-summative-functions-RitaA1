@@ -171,4 +171,17 @@ function shortest_dist() {
 
 
 
-
+//perpendicular bisector
+function perp_bisector() {
+    let x1 =  Number(document.getElementById("m").value)
+    let y1 = Number(document.getElementById("b").value)
+    let x2 = Number(document.getElementById("x").value)
+    let y2 = Number(document.getElementById("x").value)
+    let m2 = ((x2 - x1)/(y2-y1))*-1
+    let mid1 = average(x1, x2)
+    let mid2 = average(y1, y2)
+    let b = mid2 - m2*mid1
+    let equation = ` y = ${m2}x + ${b}`
+    document.getElementById("answer4").textContent = equation
+    console.log(equation)
+}
