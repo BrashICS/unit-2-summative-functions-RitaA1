@@ -10,7 +10,7 @@
 
 /*** Event Listeners ***/
 document.getElementById("slope").addEventListener("click", slope);
-document.getElementById("length2").addEventListener("click", length_i);
+document.getElementById("length2").addEventListener("click", length);
 document.getElementById("midpoint").addEventListener("click", midpoint);
 document.getElementById("rec_prism_volume").addEventListener("click", rect_prism_volume)
 document.getElementById("rec_prism_area").addEventListener("click", rect_prism_area)
@@ -76,7 +76,7 @@ function midpoint() {
     return (delta(x2, x1))**2 + delta(y2,y1)**2
 }**/
 
-function length_i() {
+function length() {
     let x1 =  Number(document.getElementById("x1").value)
     let y1 = Number(document.getElementById("y1").value)
     let x2 = Number(document.getElementById("x2").value)
@@ -92,8 +92,8 @@ function rect_prism_volume() {
     let w = Number(document.getElementById("width").value)
     let h = Number(document.getElementById("height").value)
     let volume = l*w*h
-    document.getElementById("answer").textContent = volume
-    console.log(volume)
+    document.getElementById("answer").textContent = round_user(volume)
+    console.log(round_user(volume))
 }
 
 function rect_prism_area() {
@@ -101,22 +101,22 @@ function rect_prism_area() {
     let w = Number(document.getElementById("width").value)
     let h = Number(document.getElementById("height").value)
     let area = 2*w*l + 2*l*h + 2*h*w
-    document.getElementById("answer").textContent = area
-    console.log(area)
+    document.getElementById("answer").textContent = round_user(area)
+    console.log(round_user(area))
 }
 
 function sphere_volume() {
     let r =  Number(document.getElementById("radius").value)
     let volume = 4/3*Math.PI*r**3
-    document.getElementById("answer").textContent = volume
-    console.log(volume)
+    document.getElementById("answer").textContent = round_user(volume)
+    console.log(round_user(volume))
 }
 
 function sphere_area() {
     let r =  Number(document.getElementById("radius").value)
     let area = 4*Math.PI*r**2
-    document.getElementById("answer").textContent = area
-    console.log(area)
+    document.getElementById("answer").textContent = round_user(area)
+    console.log(round_user(area))
 }
 
 
@@ -134,7 +134,7 @@ function vertex() {
     let b = Number(document.getElementById("b").value)
     let c = Number(document.getElementById("c").value)
     let x = -b/(2*a)
-    let vertex =  `(${x}, ${y_quad(a, b, c, x)})`
+    let vertex =  `(${round_user(x)}, ${round_user(y_quad(a, b, c, x))})`
     document.getElementById("quadratic_output").textContent = vertex
     console.log(vertex)
 
@@ -153,7 +153,7 @@ function zeros() {
     else {
         /**let x1 = `(${(-b + Math.sqrt(b**2 -(4*a*c)))/(2*a)}, 0)`
         let x2 = `(${(-b - Math.sqrt(b**2 - (4*a*c)))/(2*a)}, 0)` **/
-        let zeros = `(${(-1*b + Math.sqrt((b**2) -(4*a*c)))/(2*a)}, 0) (${(-1*b - Math.sqrt((b**2) - (4*a*c)))/(2*a)}, 0)`
+        let zeros = `(${round_user((-1*b + Math.sqrt((b**2) -(4*a*c)))/(2*a))}, 0) (${round_user((-1*b - Math.sqrt((b**2) - (4*a*c)))/(2*a))}, 0)`
         document.getElementById("quadratic_output").textContent = zeros
         console.log(zeros)
     }
