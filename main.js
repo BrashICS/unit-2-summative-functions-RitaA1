@@ -9,8 +9,8 @@
 'use strict';
 
 /*** Event Listeners ***/
-document.getElementById("slope").addEventListener("click", slope);
-document.getElementById("length2").addEventListener("click", length);
+document.getElementById("slope").addEventListener("click", slope_btn);
+document.getElementById("length2").addEventListener("click", length_btn);
 document.getElementById("midpoint").addEventListener("click", midpoint);
 document.getElementById("rec_prism_volume").addEventListener("click", rect_prism_volume)
 document.getElementById("rec_prism_area").addEventListener("click", rect_prism_area)
@@ -40,24 +40,19 @@ function delta(a, b) {
     return(a - b)
 }
 
-/**function slope(x1, y1, x2, y2) {
-    return (delta(y2, y1)/delta(x2, x1))
-} **/
 
-    /**function slope2(x1, y1,x2,y2) {
-        let slope = delta(y2, y1)/delta(x2, x1)
-        return slope
-    }**/
+function slope(x1, y1,x2,y2) {
+    let slope = delta(y2, y1)/delta(x2, x1)
+    return slope
+    }
 
-function slope() {
+function slope_btn() {
     let x1 =  Number(document.getElementById("x1").value)
     let y1 = Number(document.getElementById("y1").value)
     let x2 = Number(document.getElementById("x2").value)
     let y2 = Number(document.getElementById("y2").value)
-    let slope = (delta(y2, y1))/(delta(x2, x1))
- 
-    document.getElementById("answer2").textContent = round_user(slope)
-    console.log(round_user(slope)) 
+    document.getElementById("answer2").textContent = round_user(slope(x1, y1, x2, y2))
+    console.log(round_user(slope(x1, y1, x2, y2))) 
 }
 
 
@@ -75,18 +70,18 @@ function midpoint() {
     console.log(midpoint)  
 }
 
-/**function length1(x1, x2, y1, y2) {
-    return ((delta(x2, x1))**2 + (delta(y2,y1))**2)
-}**/
+function length(x1, x2, y1, y2) {
+    return (Math.sqrt(delta(x2, x1)**2 + delta(y2,y1)**2))
+}
 
-function length() {
+function length_btn() {
     let x1 =  Number(document.getElementById("x1").value)
     let y1 = Number(document.getElementById("y1").value)
     let x2 = Number(document.getElementById("x2").value)
     let y2 = Number(document.getElementById("y2").value)
-    let length = Math.sqrt(delta(x2, x1)**2 + delta(y2,y1)**2)
-    document.getElementById("answer2").textContent = round_user(length)
-    console.log (round_user(length))
+ //   let length = Math.sqrt(delta(x2, x1)**2 + delta(y2,y1)**2)
+    document.getElementById("answer2").textContent = round_user(length(x1, x2, y1, y2))
+    console.log (round_user(length(x1, x2, y1, y2)))
 }
 
 // 7
@@ -121,7 +116,6 @@ function sphere_area() {
     document.getElementById("answer").textContent = round_user(area)
     console.log(round_user(area))
 }
-
 
 
 
