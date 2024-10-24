@@ -18,8 +18,13 @@ document.getElementById("sphere_volume").addEventListener("click", sphere_volume
 document.getElementById("sphere_area").addEventListener("click", sphere_area)
 document.getElementById("zeros").addEventListener("click", zeros);
 document.getElementById("vertex").addEventListener("click", vertex);
+document.getElementById("y_int").addEventListener("click", y_intercept);
 document.getElementById("short_dist").addEventListener("click", shortest_dist);
 document.getElementById("perp_bisector").addEventListener("click", perp_bisector);
+document.getElementById("theta1").addEventListener("click", sin_theta);
+document.getElementById("theta2").addEventListener("click", cos_theta);
+document.getElementById("theta3").addEventListener("click", tan_theta);
+
 
 
 
@@ -144,15 +149,21 @@ function zeros() {
     let c = Number(document.getElementById("c").value)
     let discriminant = b**2 - 4*a*c
     if (discriminant < 0 ) {
-        document.getElementById("quadratic_output").textContent = ` It has no zeros`
-        console.log(`It has no zeros`)
+        document.getElementById("quadratic_output").textContent = ` It has no real zeros`
+        console.log(`It has no real zeros`)
     }
     else {
         let zeros = `(${round_user((-1*b + Math.sqrt((b**2) -(4*a*c)))/(2*a))}, 0) (${round_user((-1*b - Math.sqrt((b**2) - (4*a*c)))/(2*a))}, 0)`
         document.getElementById("quadratic_output").textContent = zeros
         console.log(zeros)
     }
+}
 
+function y_intercept() {
+    let c = Number(document.getElementById("c").value)
+    let y = c
+    document.getElementById("quadratic_output").textContent = round_user(y)
+    console.log(round_user(y))
 }
 
 //shortest dist
@@ -188,4 +199,29 @@ function perp_bisector() {
     let equation = `y = ${m2}x + ${b1}`
     document.getElementById("answer2").textContent = equation
     console.log(equation)
+}
+
+//Trignometry
+function sin_theta() {
+    let opp =  Number(document.getElementById("opp").value)
+    let hyp = Number(document.getElementById("hyp").value)
+    let theta = (Math.asin(opp/hyp))*(180/Math.PI)
+    document.getElementById("answer5").textContent = `${theta}°`
+    console.log(`${theta}°`)
+}
+
+function cos_theta() {
+    let adj =  Number(document.getElementById("adj").value)
+    let hyp = Number(document.getElementById("hyp").value)
+    let theta = (Math.acos(adj/hyp))*(180/Math.PI)
+    document.getElementById("answer5").textContent = `${theta}°`
+    console.log(`${theta}°`)
+}
+
+function tan_theta() {
+    let opp =  Number(document.getElementById("opp").value)
+    let adj = Number(document.getElementById("adj").value)
+    let theta = (Math.atan(opp/adj))*(180/Math.PI)
+    document.getElementById("answer5").textContent = `${theta}°`
+    console.log(`${theta}°`)
 }
