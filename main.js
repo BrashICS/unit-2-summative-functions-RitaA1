@@ -122,6 +122,47 @@ function sphere_area() {
     console.log(round_user(area))
 }
 
+function cylinder_volume() {
+    let r =  Number(document.getElementById("radius").value)
+    let volume = 4/3*Math.PI*r**3
+    document.getElementById("answer").textContent = round_user(volume)
+    console.log(round_user(volume))
+}
+
+function cylinder_area() {
+    let r =  Number(document.getElementById("radius").value)
+    let volume = 4/3*Math.PI*r**3
+    document.getElementById("answer").textContent = round_user(volume)
+    console.log(round_user(volume))
+}
+
+function cone_volume() {
+    let r =  Number(document.getElementById("radius").value)
+    let volume = 4/3*Math.PI*r**3
+    document.getElementById("answer").textContent = round_user(volume)
+    console.log(round_user(volume))
+}
+
+function cone_area() {
+    let r =  Number(document.getElementById("radius").value)
+    let volume = 4/3*Math.PI*r**3
+    document.getElementById("answer").textContent = round_user(volume)
+    console.log(round_user(volume))
+}
+
+function tri_prism_volume() {
+    let r =  Number(document.getElementById("radius").value)
+    let volume = 4/3*Math.PI*r**3
+    document.getElementById("answer").textContent = round_user(volume)
+    console.log(round_user(volume))
+}
+
+function tri_prism_area() {
+    let r =  Number(document.getElementById("radius").value)
+    let volume = 4/3*Math.PI*r**3
+    document.getElementById("answer").textContent = round_user(volume)
+    console.log(round_user(volume))
+}
 
 
 // Calculate the y-value of a parabola from standand form
@@ -206,22 +247,22 @@ function sin_theta() {
     let opp =  Number(document.getElementById("opp").value)
     let hyp = Number(document.getElementById("hyp").value)
     let theta = (Math.asin(opp/hyp))*(180/Math.PI)
-    document.getElementById("answer5").textContent = `${theta}°`
-    console.log(`${theta}°`)
+    document.getElementById("answer5").textContent = `${round_user(theta)}°`
+    console.log(`${round_user(theta)}°`)
 }
 
 function cos_theta() {
     let adj =  Number(document.getElementById("adj").value)
     let hyp = Number(document.getElementById("hyp").value)
     let theta = (Math.acos(adj/hyp))*(180/Math.PI)
-    document.getElementById("answer5").textContent = `${theta}°`
-    console.log(`${theta}°`)
+    document.getElementById("answer5").textContent = `${round_user(theta)}°`
+    console.log(`${round_user(theta)}°`)
 }
 
 function tan_theta() {
     let opp =  Number(document.getElementById("opp").value)
     let adj = Number(document.getElementById("adj").value)
     let theta = (Math.atan(opp/adj))*(180/Math.PI)
-    document.getElementById("answer5").textContent = `${theta}°`
-    console.log(`${theta}°`)
+    document.getElementById("answer5").textContent = `${round_user(theta)}°`
+    console.log(`${round_user(theta)}°`)
 }
