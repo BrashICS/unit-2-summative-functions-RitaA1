@@ -14,7 +14,7 @@
         <div class="container">
             <h1 class="title">
                 <img class="heading_img" src="./images/geometry.png" width="32px">
-                GEOMETRY HELPER
+                Geometery Helper
                 <img class="heading_img" src="./images/geometry.png" width="32px">
             </h1>
 
@@ -31,6 +31,7 @@
             <!-- Geometry -->
             <div>
                 <h4>Part 1 - Geometry</h4>
+            
                 <label for="length">length:</label>
                 <input id="length" name="length" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 <label for="width">width:</label>
@@ -40,17 +41,15 @@
                 <label for="radius">radius:</label>
                 <input id="radius" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">  
         
-                <div> 
+                <br>
+                <button id="rec_prism_volume"> Rectangular Prism Volume</button> 
+                <button id="rec_prism_area"> Rectangular Prism Area</button>
+                <button id="sphere_volume"> Sphere Volume</button> 
+                <button id="sphere_area"> Sphere Area</button>  
+                <div>
                     <br>
-                    <button id="rec_prism_volume"> Rectangular Prism Volume</button> 
-                    <button id="rec_prism_area"> Rectangular Prism Area</button>
-                    <button id="sphere_volume"> Sphere Volume</button> 
-                    <button id="sphere_area"> Sphere Area</button>  
-                    <div>
-                        <br>
-                        The Answer is:
-                        <span id="answer"></span>
-                    </div>
+                    The Answer is:
+                    <span id="answer"></span>
                 </div>
 
                 
@@ -59,8 +58,7 @@
             <hr> 
             <!-- slopes, length and midsegment-->
             <div>
-                <h4>Slope, Length, And Midpoint of A Line Segment</h4>
-
+                <h4>Part 3 - Slope, Length, Midpoint, And Perpendicular Bisector of A Line Segment</h4>
                 <label for="x1">x1:</label>
                 <input id="x1" name="x1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 <label for="y1">y1:</label>
@@ -71,11 +69,10 @@
                 <input id="y2" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">  
 
                 <br>
-                <br>
-
                 <button id="slope"> Slope</button> 
                 <button id="length2"> Length</button>
                 <button id="midpoint"> Midpoint</button> 
+                <button id="perp_bisector"> Perpendicular Bisector</button> 
 
                 <div>
                     <br>
@@ -84,7 +81,31 @@
                 </div>
             </div>
 
-            <hr>
+
+            <!-- geometry -->
+            <div>
+                <h5>Shortest Distance Between A Point And A Line </h5>
+                <label for="m">m:</label>
+                <input id="m1" name="m1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+                <label for="b">b:</label>
+                <input id="b1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+                <label for="x11">x:</label>
+                <input id="x11" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
+
+                <label for="y11">y:</label>
+                <input id="y11" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
+                <br>
+                <button id="short_dist">Find shortest distance between point and line</button>
+
+                <!-- Output for the zeros or vertex -->
+            <div> 
+                    <br>
+                    The Answer is: 
+                    <span id="answer4"></span>
+            </div>
+            </div>
+
+            <hr> 
 
             <!-- Quadratics -->
             <div>
@@ -92,7 +113,7 @@
                 <p>
                     Enter the values of "a", "b", and "c" of a quadratic in standard form:
                 </p>
-                
+
                 <label for="a">a:</label>
                 <input id="a" name="a" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 <label for="b">b:</label>
@@ -111,37 +132,9 @@
             </div>
             </div>
 
-            <hr>
-            <!-- geometry -->
-            <div>
-                <h4>Part 3 Length and Perpendicular Bisector of A Line Segment</h4>
-                <!--p>
-                    Enter the values of "m", "b", "x" and "y" of a quadratic in standard form:
-                </p-->
-                
-                <label for="m">m:</label>
-                <input id="m1" name="m1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
-                <label for="b">b:</label>
-                <input id="b1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
-                <label for="x11">x:</label>
-                <input id="x11" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
-
-                <label for="y11">y:</label>
-                <input id="y11" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
-                <br>
-                <br>
-                <button id="short_dist">Find shortest distance between point and line</button>
-
-                <!-- Output for the zeros or vertex -->
-            <div> 
-                    <br>
-                    The Answer is: 
-                    <span id="answer4"></span>
-            </div>
-            </div>
             
             <!--continue-->
-            <div>
+            <!--div>
                 <h4>perpendicular bisector</h4>
 
                 <label for="x1">x1:</label>
@@ -153,7 +146,6 @@
                 <label for="y4">y2:</label>
                 <input id="y4" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">  
                 <br>
-                <br>
                 <button id="perp_bisector"> The Equation of The Perpendicular Bisector</button> 
 
                 <div>
@@ -161,7 +153,7 @@
                     The Answer is:
                     <span id="answer5"></span>
                 </div>
-            </div>
+            </div-->
         </div>
     </body>
 </html>
