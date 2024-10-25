@@ -9,7 +9,7 @@
 'use strict';
 
 /*** Event Listeners ***/
-
+ 
 document.getElementById("slope").addEventListener("click", slope_btn);
 document.getElementById("length2").addEventListener("click", length_btn);
 document.getElementById("midpoint").addEventListener("click", midpoint);
