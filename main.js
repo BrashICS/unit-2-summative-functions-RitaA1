@@ -160,24 +160,6 @@ function cone_area() {
     console.log(round_user(area))
 }
 
-/**function tri_prism_volume() {
-    let l =  Number(document.getElementById("length").value)
-    let b =  Number(document.getElementById("base").value)
-    let h = Number(document.getElementById("height").value) 
-    let volume = (1/2)*b*h*l
-    document.getElementById("answer").textContent = round_user(volume)
-    console.log(round_user(volume))
-}
-
-function tri_prism_area() {
-    let l =  Number(document.getElementById("length").value)
-    let b =  Number(document.getElementById("base").value)
-    let h = Number(document.getElementById("height").value)
-    let p = h + b + (Math.sqrt((b**2) + (h**2)))
-    let area = (b*h) + (p*l)
-    document.getElementById("answer").textContent = round_user(area)
-    console.log(round_user(area)) **/
-}
 
 
 // Calculate the y-value of a parabola from standand form
