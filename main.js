@@ -228,8 +228,8 @@ function perp_bisector() {
     let m2 = ((x2 - x1)/(y2-y1))*-1
     let midpt_x = average(x1, x2)
     let midpt_y = average(y1, y2)
-    let b1 = midpt_y - m2*midpt_x
-    let equation = `y = ${m2}x + ${b1}`
+    let b1 = midpt_y - (m2*midpt_x)
+    let equation = `y = ${round_user(m2)}x + ${round_user(b1)}`
     document.getElementById("answer2").textContent = equation
     console.log(equation)
 }
