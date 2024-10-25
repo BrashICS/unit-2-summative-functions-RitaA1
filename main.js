@@ -18,6 +18,12 @@ document.getElementById("sphere_volume").addEventListener("click", sphere_volume
 document.getElementById("sphere_area").addEventListener("click", sphere_area)
 document.getElementById("zeros").addEventListener("click", zeros);
 document.getElementById("vertex").addEventListener("click", vertex);
+document.getElementById("cylinder_volume").addEventListener("click", cylinder_volume)
+document.getElementById("cylinder_area").addEventListener("click", cylinder_area)
+document.getElementById("cone_volume").addEventListener("click", cone_volume)
+document.getElementById("cone_area").addEventListener("click", cone_area)
+document.getElementById("tri_prism_volume").addEventListener("click", tri_prism_volume);
+document.getElementById("tri_prism_area").addEventListener("click", tri_prism_area);
 document.getElementById("y_int").addEventListener("click", y_intercept);
 document.getElementById("short_dist").addEventListener("click", shortest_dist);
 document.getElementById("perp_bisector").addEventListener("click", perp_bisector);
@@ -133,9 +139,9 @@ function cylinder_volume() {
 function cylinder_area() {
     let r =  Number(document.getElementById("radius").value)
     let h = Number(document.getElementById("height").value)
-    let volume = (2*Math.PI*r*h) + (2*Math.PI*(r**2))
-    document.getElementById("answer").textContent = round_user(volume)
-    console.log(round_user(volume))
+    let area = (2*Math.PI*r*h) + (2*Math.PI*(r**2))
+    document.getElementById("answer").textContent = round_user(area)
+    console.log(round_user(area))
 }
 
 function cone_volume() {
@@ -148,23 +154,29 @@ function cone_volume() {
 
 function cone_area() {
     let r =  Number(document.getElementById("radius").value)
-    let volume = (Math.PI*r)*(r + Math.sqrt((h**2)+ (r**2)))
-    document.getElementById("answer").textContent = round_user(volume)
-    console.log(round_user(volume))
+    let h = Number(document.getElementById("height").value)
+    let area = (Math.PI*r)*(r + Math.sqrt((h**2)+ (r**2)))
+    document.getElementById("answer").textContent = round_user(area)
+    console.log(round_user(area))
 }
 
-function tri_prism_volume() {
-    let r =  Number(document.getElementById("radius").value)
-    let volume = 4/3*Math.PI*r**3
+/**function tri_prism_volume() {
+    let l =  Number(document.getElementById("length").value)
+    let b =  Number(document.getElementById("base").value)
+    let h = Number(document.getElementById("height").value) 
+    let volume = (1/2)*b*h*l
     document.getElementById("answer").textContent = round_user(volume)
     console.log(round_user(volume))
 }
 
 function tri_prism_area() {
-    let r =  Number(document.getElementById("radius").value)
-    let volume = 4/3*Math.PI*r**3
-    document.getElementById("answer").textContent = round_user(volume)
-    console.log(round_user(volume))
+    let l =  Number(document.getElementById("length").value)
+    let b =  Number(document.getElementById("base").value)
+    let h = Number(document.getElementById("height").value)
+    let p = h + b + (Math.sqrt((b**2) + (h**2)))
+    let area = (b*h) + (p*l)
+    document.getElementById("answer").textContent = round_user(area)
+    console.log(round_user(area)) **/
 }
 
 
