@@ -89,7 +89,7 @@ function length_btn() {
     console.log (round_user(length(x1, x2, y1, y2)))
 }
 
-// 7
+// geometry functions
 function rect_prism_volume() {
     let l =  Number(document.getElementById("length").value)
     let w = Number(document.getElementById("width").value)
@@ -124,28 +124,31 @@ function sphere_area() {
 
 function cylinder_volume() {
     let r =  Number(document.getElementById("radius").value)
-    let volume = 4/3*Math.PI*r**3
+    let h = Number(document.getElementById("height").value)
+    let volume = Math.PI*(r**2)*h
     document.getElementById("answer").textContent = round_user(volume)
     console.log(round_user(volume))
 }
 
 function cylinder_area() {
     let r =  Number(document.getElementById("radius").value)
-    let volume = 4/3*Math.PI*r**3
+    let h = Number(document.getElementById("height").value)
+    let volume = (2*Math.PI*r*h) + (2*Math.PI*(r**2))
     document.getElementById("answer").textContent = round_user(volume)
     console.log(round_user(volume))
 }
 
 function cone_volume() {
     let r =  Number(document.getElementById("radius").value)
-    let volume = 4/3*Math.PI*r**3
+    let h = Number(document.getElementById("height").value)
+    let volume = Math.PI*(r**2)*(h/3)
     document.getElementById("answer").textContent = round_user(volume)
     console.log(round_user(volume))
 }
 
 function cone_area() {
     let r =  Number(document.getElementById("radius").value)
-    let volume = 4/3*Math.PI*r**3
+    let volume = (Math.PI*r)*(r + Math.sqrt((h**2)+ (r**2)))
     document.getElementById("answer").textContent = round_user(volume)
     console.log(round_user(volume))
 }

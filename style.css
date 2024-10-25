@@ -5,7 +5,7 @@
 
 /* Using font-size: larger to make things pop. Feel free to change. */
 html {
-    background-image: linear-gradient( rgb(255, 153, 170) , rgb(226, 114, 243))
+    background-image: linear-gradient(  rgb(255, 153, 187) , rgb(226, 114, 243))
 }
 html, body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
