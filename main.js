@@ -22,8 +22,6 @@ document.getElementById("cylinder_volume").addEventListener("click", cylinder_vo
 document.getElementById("cylinder_area").addEventListener("click", cylinder_area)
 document.getElementById("cone_volume").addEventListener("click", cone_volume)
 document.getElementById("cone_area").addEventListener("click", cone_area)
-document.getElementById("tri_prism_volume").addEventListener("click", tri_prism_volume);
-document.getElementById("tri_prism_area").addEventListener("click", tri_prism_area);
 document.getElementById("y_int").addEventListener("click", y_intercept);
 document.getElementById("short_dist").addEventListener("click", shortest_dist);
 document.getElementById("perp_bisector").addEventListener("click", perp_bisector);

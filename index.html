@@ -11,6 +11,7 @@
 
     <body>
 
+        <!-- the div "container" is for the light background behind the contents-->
         <div class="container">
             <h1 class="title">
                 <img class="heading_img" src="./images/geometry.png" width="32px">
@@ -32,6 +33,7 @@
             <div>
                 <h4> Geometry</h4>
                 
+                <!--inputs-->
                 <label for="length">length:</label>
                 <input id="length" name="length" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 <label for="width">width:</label>
@@ -42,9 +44,8 @@
                 <input id="base" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp; 
                 <label for="radius">radius:</label>
                 <input id="radius" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp; 
-        
-                
 
+                <!-- buttons-->
                 <button id="sphere_volume"> Sphere Volume</button> &nbsp;
                 <button id="sphere_area"> Sphere Area</button>  &nbsp;
                 <br>
@@ -56,43 +57,22 @@
                 <button id="cone_volume"> Cone Volume</button> &nbsp;
                 <button id="cone_area"> Cone Area</button>  &nbsp;
                 
-              
+                <!-- Output for the volume and area of the 3D shapes -->
                 <div>
                     <br>
                     The Answer is:
                     <span id="answer"></span>
                 </div>
-
-    
-                
+ 
             </div>
             
-            <!-- continue >
-            <div>
-                <h5> Triangular prism </h5>
-                <label for="a">a:</label>
-                <input id="m1" name="m1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
-                <label for="b">b:</label>
-                <input id="b1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
-                <label for="x11">:</label>
-                <input id="x11" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
-
-                <label for="y11">y:</label>
-                <input id="y11" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
-                
-                <button id="short_dist"> Shortest Distance</button>
-
-                <div> 
-                    <br>
-                    The Answer is: 
-                    <span id="answer4"></span>
-                </div>
-            </div-->
        
             <hr> 
-            <!-- slopes, length, midpoint and perpendicular bisector-->
+            <!-- find the slope, length, midpoint and perpendicular bisector of a line segment-->
             <div>
-                <h4> Slope, Length, Midpoint, And Perpendicular Bisector of A Line Segment</h4>
+                <h4> Find The Slope, Length, Midpoint, And Perpendicular Bisector of A Line Segment</h4>
+
+                <!--inputs-->
                 <label for="x1">x1:</label>
                 <input id="x1" name="x1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 <label for="y1">y1:</label>
@@ -102,13 +82,15 @@
                 <label for="y2">y2:</label>
                 <input id="y2" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">  &nbsp;
 
+                <!-- buttons-->
                 <br>
                 <br>
                 <button id="slope"> Slope</button> &nbsp;
                 <button id="length2"> Length</button> &nbsp;
                 <button id="midpoint"> Midpoint</button> &nbsp;
                 <button id="perp_bisector"> Perpendicular Bisector</button> 
-
+               
+                <!-- Output for the slope, length, midpoint or perpendicular bisector -->
                 <div>
                     <br>
                     The Answer is:
@@ -117,27 +99,29 @@
             </div>
 
 
-            <!-- continue -->
+            <!-- shortest distance between a point and a line -->
             <div>
                 <h5>Find The Shortest Distance Between A Point And A Line </h5>
+
+                <!--inputs-->
                 <label for="m">m:</label>
                 <input id="m1" name="m1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 <label for="b">b:</label>
                 <input id="b1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 <label for="x11">x:</label>
                 <input id="x11" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
-
                 <label for="y11">y:</label>
                 <input id="y11" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 
+                <!-- button-->
                 <button id="short_dist"> Shortest Distance</button>
 
-                <!-- Output for the zeros or vertex -->
-            <div> 
+                <!-- Output for the shortest distance -->
+                <div> 
                     <br>
                     The Answer is: 
                     <span id="answer4"></span>
-            </div>
+                </div>
             </div>
 
             <hr> 
@@ -149,12 +133,15 @@
                     Enter the values of "a", "b", and "c" of a quadratic in standard form:
                 </p>
 
+                <!--inputs-->
                 <label for="a">a:</label>
                 <input id="a" name="a" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 <label for="b">b:</label>
                 <input id="b" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 <label for="c">c:</label>
                 <input id="c" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+                <!-- buttons-->
                 <br>
                 <br>
                 <button id="zeros">Find the Zeros</button>  &nbsp;
@@ -163,11 +150,11 @@
 
 
                 <!-- Output for the zeros or vertex -->
-            <div> 
+                <div> 
                     <br>
                     The Answer is: 
                     <span id="quadratic_output"></span>
-            </div>
+             </div>
             </div>
 
             <hr>
@@ -177,6 +164,8 @@
                 <p>
                     Find the theta of a right angle triangle using either the sin, cos, or tan inverse.
                 </p>
+
+                <!--inputs-->
                 <label for="opp"> Opposite:</label>
                 <input id="opp" name="opp" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
                 <label for="adj"> Adjacent:</label>
@@ -184,17 +173,18 @@
                 <label for="hyp"> Hypetenuse:</label>
                 <input id="hyp" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
         
+                <!-- buttons-->
                 <button id="theta1"> sin<sup>-1</sup>x  </button>  &nbsp;
                 <button id="theta2"> cos<sup>-1</sup>x </button>  &nbsp;
                 <button id="theta3"> tan<sup>-1</sup>x </button>  &nbsp;
 
 
-                <!-- Output -->
-            <div> 
+                <!-- Output for the angle -->
+                <div> 
                     <br>
                     The Answer is: 
                     <span id="answer5"></span>
-            </div>
+                </div>
             </div>
 
 
