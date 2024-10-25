@@ -65,8 +65,8 @@ button:hover {
 button, input {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
-    color:rgb(53, 23, 65);
-    border-width: 2px;
+    color:rgb(55, 13, 71);
+    border-width: 1px;
     border-style: solid;
     border-color:  rgb(106, 53, 114);
     border-radius:5px;
